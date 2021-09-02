@@ -20,8 +20,9 @@
                     <li class="navItem"><a href="#">Case Studies</a></li>
                     <li class="navItem"><a href="./customer_support.html">Customer Support</a></li>
                     <li class="navItem"><a href="#">Contact Us</a></li>
-                    <li><i class="fas fa-bars"></i></li>
+                    
                 </ul>
+                <i class="fas fa-bars" onclick="handleClick()"></i>
             </div>
         </div>
 
@@ -87,5 +88,29 @@
 
 
     </div>
+
+    <script>
+
+        
+
+           
+        function handleClick(){
+            let track = document.querySelector('.nav');
+            
+            if(track.style.display === "none")
+            {
+                track.style.display = 'block';
+            }
+            else{
+                track.style.display = 'none';
+            }
+            
+        }
+
+
+    </script>
+
+
+
 </body>
 </html>

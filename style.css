@@ -65,7 +65,7 @@ body{
     gap: 1rem;
     text-align: center;
     justify-content: flex-end;
-    right: 5rem;
+    right: 2rem;
 }
 a{
     text-decoration: none;
@@ -80,7 +80,9 @@ a{
 }
 
 .fa-bars{
-    visibility: hidden;
+    display: none;
+    position: absolute;
+    top:-500px
 }
 
 .breadCrumbs{
@@ -182,17 +184,18 @@ a{
 
  .showCase{
     width: 100vw;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+
 
  }
 
  .showcaseImg{
      width: 50%;
      height: 100%;
-     padding: 3rem;
+     margin: auto;
+     padding-left: .5rem;
  }
 
  .showcaseImg > img{
@@ -247,14 +250,15 @@ a{
 
  .btn{
      background: var(--font);
-     padding: 1rem;
+     padding: .5rem;
      text-transform: uppercase;
-     font-size: 1rem;
+     font-size: .7rem;
      font-weight: 600;
      width: 30%;
      cursor: pointer;
      border: none;
      border-radius: 50px;
+     text-align: center;
  }
 
 .contactInformation{
@@ -266,7 +270,7 @@ a{
 
 .contactInformation >div{
     display: flex;
-    height: 450px;
+    height: auto;
     position: relative;
     overflow: hidden;
 }
@@ -296,11 +300,135 @@ a{
 
 .objectOver{
     position: absolute;
-    text-align: left;
-    width: 100%;
+    text-align: center;
+    width: 50%;
     top: 50%;
-    left: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     z-index: 11;
-    
+}
+
+.objectOver > h1, .objectOver > div{
+    width: 70%;
+    margin: auto;
+}
+
+
+@media screen and (max-width : 768px){
+    .fa-bars{
+        display: block;
+        position: absolute;
+        top: 2.5%;
+        right: 10%;
+        font-size: 2rem;
+    }
+
+    .nav{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 12%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        width: 100%;
+        height: auto;
+        background: var(--blackBg);
+        z-index: 1;
+        transition: all 250ms ease-in-out;
+        display: none;
+    }
+
+    .navItem{
+        padding: 1rem;
+    }
+
+    .photoContainer > div{
+        width: 45%;
+    }
+
+
+    .showCase{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .showcaseImg{
+        width: 100%;
+    }
+    .formTag{
+        width: 100%;
+    }
+
+    .contactInformation{
+        padding: 0;
+    }
+
+    .contactInformation > div{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 90%;
+        margin: auto;
+    }
+
+    .contact, .about{
+        width: 90%;
+        margin: auto;
+    }
+
+    .objectOver{
+        width: 60%;
+        margin: auto;
+    }
+
+    .objectOver > .btn{
+        width: 70%;
+        text-align: center;
+        padding: .5rem;
+    }
+
+
+
+}
+
+
+
+
+@media screen and (max-width : 480px){
+
+    .breadCrumbs > ul{
+        padding: 1rem .5rem;
+        
+    }
+
+    .nav{
+        transform: translate(-50%, 0%);
+    }
+
+
+    .photoContainer > div{
+        width: 90%;
+    }
+
+    .footer{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .footer > .breadCrumbs >ul{
+        padding: 2rem 1rem 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formTag{
+        padding: 1rem;
+    }
+    .objectOver > h1, .objectOver > div{
+        width: 100%;
+        margin: auto;
+    }
 
 }

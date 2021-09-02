@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>Customer_support</title>
 </head>
 <body>
@@ -16,11 +17,12 @@
                 <ul class="nav">
                     <li class="navItem"><a href="#">Home</a></li>
                     <li class="navItem"><a href="#">About Us</a></li>
-                    <li class="navItem"><a href="index.html">Case Studies</a></li>
+                    <li class="navItem"><a href="./index.html">Case Studies</a></li>
                     <li class="navItem"><a href="#">Customer Support</a></li>
                     <li class="navItem"><a href="#">Contact Us</a></li>
-                    <li><i class="fas fa-bars"></i></li>
+                    
                 </ul>
+                <i class="fas fa-bars" onclick="handleClick()"></i>
             </div>
         </div>
 
@@ -102,5 +104,23 @@
 
 
     </div>
+
+
+    <script>
+           function handleClick(){
+            let track = document.querySelector('.nav');
+            
+            if(track.style.display === "none")
+            {
+                track.style.display = 'block';
+            }
+            else{
+                track.style.display = 'none';
+            }
+            
+        }
+    </script>
+
+    
 </body>
 </html>
